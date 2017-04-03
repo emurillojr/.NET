@@ -1,0 +1,12 @@
+CREATE PROC [dbo].[menus_getbyid]
+@menu_id int
+
+AS
+
+SELECT [menu_id]
+      ,[menu_name]
+  FROM [dbo].[menus]
+  WHERE menu_id = @menu_id
+
+
+

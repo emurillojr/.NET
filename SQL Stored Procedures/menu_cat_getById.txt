@@ -1,0 +1,12 @@
+CREATE PROC [dbo].[menu_cat_getById]
+
+@cat_id int
+
+AS
+
+
+SELECT [cat_id]
+      ,[cat_name]
+  FROM [dbo].[menu_categories]
+  WHERE cat_id = @cat_id
+

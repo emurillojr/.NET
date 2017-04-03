@@ -1,0 +1,15 @@
+CREATE PROC [dbo].[guest_GetByEmail]
+
+@guest_email varchar(100)
+
+AS
+
+SELECT [guest_id]
+      ,[guest_email]
+      ,[guest_first]
+      ,[guest_last]
+      ,[guest_salt]
+      ,[guest_pwd]
+      ,[guest_phone]
+	  FROM guests
+  WHERE guest_email = @guest_email

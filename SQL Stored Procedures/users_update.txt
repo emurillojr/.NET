@@ -1,0 +1,30 @@
+CREATE PROC [dbo].[users_update]
+
+@user_id int,
+@user_email varchar(100)
+,@user_first varchar(25)
+,@user_last varchar(25)
+,@user_add1 varchar(50)
+,@user_add2 varchar(50)
+,@user_city varchar(25)
+,@state_id char(2)
+,@user_zip varchar(10)
+,@user_pwd varchar(500)
+,@user_phone varchar(10)
+,@user_active bit
+
+AS
+
+UPDATE [dbo].[users]
+   SET [user_email] = @user_email
+      ,[user_first] = @user_first
+      ,[user_last] = @user_last
+      ,[user_add1] = @user_add1
+      ,[user_add2] = @user_add2
+      ,[user_city] = @user_city
+      ,[state_id] = @state_id
+      ,[user_zip] = @user_zip
+      ,[user_pwd] = @user_pwd
+      ,[user_phone] = @user_phone
+      ,[user_active] = @user_active
+ WHERE user_id = @user_id

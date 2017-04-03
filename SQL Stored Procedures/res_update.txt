@@ -1,0 +1,28 @@
+CREATE PROC [dbo].[res_update]
+
+@res_id int,
+@guest_id int
+,@tbl_id int
+,@user_id int
+,@res_date date
+,@res_time time(7)
+,@res_guest_cnt int
+,@res_spec_req varchar(255)
+
+AS
+
+
+
+UPDATE [dbo].[reservations]
+   SET [guest_id] = @guest_id
+      ,[tbl_id] = @tbl_id
+      ,[user_id] = @user_id
+      ,[res_date] = @res_date
+      ,[res_time] = @res_time
+      ,[res_guest_cnt] = @res_guest_cnt
+      ,[res_spec_req] = @res_spec_req
+ WHERE res_id = @res_id
+
+
+
+

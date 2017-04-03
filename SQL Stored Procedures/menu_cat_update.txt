@@ -1,0 +1,9 @@
+CREATE PROC [dbo].[menu_cat_update]
+@cat_id int,
+@cat_name varchar(25)
+AS
+
+UPDATE [dbo].[menu_categories]
+
+SET [cat_name] = @cat_name
+WHERE cat_id = @cat_id

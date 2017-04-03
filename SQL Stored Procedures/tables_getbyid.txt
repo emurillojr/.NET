@@ -1,0 +1,15 @@
+CREATE PROC [dbo].[tables_getbyid]
+
+@tbl_id int
+
+AS
+
+
+SELECT [tbl_id]
+      ,[sect_id]
+      ,[tbl_name]
+      ,[tbl_desc]
+      ,[tbl_seat_cnt]
+      ,[tbl_active]
+  FROM [dbo].[tables]
+  WHERE tbl_id = @tbl_id

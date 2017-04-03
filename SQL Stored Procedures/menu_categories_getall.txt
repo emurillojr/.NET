@@ -1,0 +1,8 @@
+CREATE PROC [dbo].[menu_categories_getall]
+AS
+
+SELECT [cat_id]
+      ,[cat_name]
+  FROM [dbo].[menu_categories]
+ORDER BY cat_name
+

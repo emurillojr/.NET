@@ -1,0 +1,15 @@
+CREATE PROC [dbo].[sections_getById]
+
+@sect_id int
+
+AS
+
+SELECT [sect_id]
+      ,[sect_name]
+      ,[sect_desc]
+      ,[sect_active]
+  FROM [dbo].[sections]
+  WHERE sect_id = @sect_id
+
+
+

@@ -1,0 +1,17 @@
+CREATE PROC [dbo].[menu_items_getbyID]
+
+@item_id int
+
+AS
+
+SELECT [item_id]
+      ,[menu_id]
+      ,[cat_id]
+      ,[item_name]
+      ,[item_desc]
+      ,[item_allergens]
+      ,[item_price]
+      ,[item_gluten_free]
+      ,[item_active]
+  FROM [dbo].[menu_items]
+  WHERE item_id = @item_id

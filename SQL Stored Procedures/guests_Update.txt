@@ -1,0 +1,20 @@
+CREATE PROC [dbo].[guests_Update]
+
+@guest_id int,
+@guest_email varchar(100),
+@guest_first varchar(25),
+@guest_last varchar(25),
+@guest_salt varchar(255),
+@guest_pwd varchar(500),
+@guest_phone varchar(10)
+
+AS
+
+UPDATE [dbo].[guests]
+   SET [guest_email] = @guest_email
+      ,[guest_first] = @guest_first
+      ,[guest_last] = @guest_last
+      ,[guest_salt] = @guest_salt
+      ,[guest_pwd] = @guest_pwd
+      ,[guest_phone] = @guest_phone
+ WHERE guest_id = @guest_id

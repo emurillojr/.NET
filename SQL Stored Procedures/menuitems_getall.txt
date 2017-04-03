@@ -1,0 +1,6 @@
+CREATE PROC [dbo].[menuitems_getall]
+AS
+SELECT *
+  FROM [dbo].[menu_items]
+
+

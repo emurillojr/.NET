@@ -1,0 +1,23 @@
+CREATE PROC [dbo].[res_insert]
+
+
+@guest_id int
+,@tbl_id int
+,@user_id int
+,@res_date date
+,@res_time time(7)
+,@res_guest_cnt int
+,@res_spec_req varchar(255)
+
+AS
+
+INSERT INTO [dbo].[reservations]
+           ([guest_id]
+           ,[tbl_id]
+           ,[user_id]
+           ,[res_date]
+           ,[res_time]
+           ,[res_guest_cnt]
+           ,[res_spec_req])
+     VALUES
+           ( @guest_id, @tbl_id, @user_id, @res_date, @res_time, @res_guest_cnt, @res_spec_req )

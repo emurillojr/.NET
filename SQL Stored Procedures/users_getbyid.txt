@@ -1,0 +1,21 @@
+CREATE PROC [dbo].[users_getbyid]
+
+@user_id int
+
+AS
+
+SELECT [user_id]
+      ,[user_email]
+      ,[user_first]
+      ,[user_last]
+      ,[user_add1]
+      ,[user_add2]
+      ,[user_city]
+      ,[state_id]
+      ,[user_zip]
+      ,[user_salt]
+      ,[user_pwd]
+      ,[user_phone]
+      ,[user_active]
+  FROM [dbo].[users]
+  WHERE [user_id] = @user_id

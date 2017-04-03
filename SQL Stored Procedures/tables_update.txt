@@ -1,0 +1,22 @@
+CREATE PROC [dbo].[tables_update]
+
+@tbl_id int,
+@sect_id int
+,@tbl_name varchar(25)
+,@tbl_desc varchar(50)
+,@tbl_seat_cnt int
+,@tbl_active bit
+
+AS
+
+
+UPDATE [dbo].[tables]
+   SET [sect_id] = @sect_id
+      ,[tbl_name] = @tbl_name
+      ,[tbl_desc] = @tbl_desc
+      ,[tbl_seat_cnt] = @tbl_seat_cnt
+      ,[tbl_active] = @tbl_active
+ WHERE tbl_id = @tbl_id
+
+
+

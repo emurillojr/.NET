@@ -1,0 +1,10 @@
+CREATE PROC [dbo].[users_getAll]
+
+
+AS
+
+
+SELECT *
+
+FROM [dbo].[users];
+

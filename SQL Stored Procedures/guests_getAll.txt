@@ -1,0 +1,7 @@
+CREATE PROC [dbo].[guests_getAll]
+
+AS
+
+SELECT * 
+FROM guests
+ORDER BY guest_last, guest_first, guest_email;

@@ -1,0 +1,17 @@
+CREATE PROC [dbo].[res_getAll]
+
+@res_id int
+
+AS
+
+SELECT [res_id]
+      ,[guest_id]
+      ,[tbl_id]
+      ,[user_id]
+      ,[res_date]
+      ,[res_time]
+      ,[res_guest_cnt]
+      ,[res_spec_req]
+  FROM [dbo].[reservations]
+  WHERE res_id = @res_id
+

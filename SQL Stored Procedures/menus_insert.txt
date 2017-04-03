@@ -1,0 +1,13 @@
+CREATE PROC [dbo].[menus_insert]
+
+@menu_name varchar(25)
+
+as
+
+INSERT INTO [dbo].[menus]
+           ([menu_name])
+     VALUES
+           (@menu_name)
+
+
+

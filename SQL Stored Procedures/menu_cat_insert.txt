@@ -1,0 +1,9 @@
+CREATE PROC [dbo].[menu_cat_insert]
+
+@cat_name varchar(25)
+AS
+
+INSERT INTO [dbo].[menu_categories]
+           ([cat_name])
+     VALUES
+           (@cat_name)

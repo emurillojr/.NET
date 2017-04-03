@@ -1,0 +1,9 @@
+CREATE PROC [dbo].[menus_getall]
+AS
+SELECT [menu_id]
+      ,[menu_name]
+  FROM [dbo].[menus]
+  ORDER BY menu_name
+
+
+

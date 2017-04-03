@@ -1,0 +1,8 @@
+CREATE PROC [dbo].[guests_getById]
+@guest_id int
+AS
+
+
+SELECT *
+FROM guests
+where guest_id = @guest_id

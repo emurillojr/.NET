@@ -1,0 +1,14 @@
+
+CREATE PROC [dbo].[users_login]
+@user_email varchar(100),
+@user_pwd varchar(500)
+
+AS
+
+
+SELECT [user_id]
+      ,[user_first]
+      ,[user_last]
+
+  FROM [dbo].[users]
+  WHERE user_email = @user_email and user_pwd = @user_pwd and user_active = 1

@@ -1,0 +1,13 @@
+CREATE PROC [dbo].[states_getall]
+
+AS
+
+SELECT [state_id]
+      ,[state_id] + ' ' + [state_name] AS state_full_name
+  FROM [dbo].[states]
+  ORDER BY state_id
+
+
+
+
+

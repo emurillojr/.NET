@@ -1,0 +1,10 @@
+CREATE PROC [dbo].[users_getByEmail]
+@user_email varchar(100)
+
+AS
+
+
+SELECT *
+
+FROM [dbo].[users]
+  WHERE user_email = @user_email and user_active = 1

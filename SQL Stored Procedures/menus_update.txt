@@ -1,0 +1,14 @@
+CREATE PROC [dbo].[menus_update]
+@menu_id int,
+@menu_name varchar(25)
+
+AS
+
+	UPDATE [dbo].[menus]
+    SET [menu_name] = @menu_name
+	WHERE menu_id = @menu_id
+
+
+
+
+

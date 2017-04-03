@@ -1,0 +1,11 @@
+CREATE PROC [dbo].[sections_getall]
+AS
+SELECT [sect_id]
+      ,[sect_name]
+      ,[sect_desc]
+      ,[sect_active]
+  FROM [dbo].[sections]
+  ORDER BY sect_name
+
+
+

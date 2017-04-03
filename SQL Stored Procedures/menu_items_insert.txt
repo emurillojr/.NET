@@ -1,0 +1,33 @@
+CREATE PROC [dbo].[menu_items_insert]
+
+
+@menu_id int
+,@cat_id int
+,@item_name varchar(50)
+,@item_desc varchar(500)
+,@item_allergens varchar(255)
+,@item_price decimal(5,2)
+,@item_gluten_free bit
+,@item_active bit
+
+as
+INSERT INTO [dbo].[menu_items]
+           ([menu_id]
+           ,[cat_id]
+           ,[item_name]
+           ,[item_desc]
+           ,[item_allergens]
+           ,[item_price]
+           ,[item_gluten_free]
+           ,[item_active])
+     VALUES
+           (@menu_id
+           ,@cat_id
+           ,@item_name
+           ,@item_desc
+           ,@item_allergens
+           ,@item_price
+           ,@item_gluten_free
+           ,@item_active)
+
+

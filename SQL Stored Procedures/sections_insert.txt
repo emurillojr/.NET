@@ -1,0 +1,16 @@
+CREATE PROC [dbo].[sections_insert]
+
+@sect_name varchar(50)
+,@sect_desc varchar(50)
+,@sect_active bit
+
+AS
+
+INSERT INTO [dbo].[sections]
+           ([sect_name]
+           ,[sect_desc]
+           ,[sect_active])
+     VALUES
+           (@sect_name
+           ,@sect_desc
+           ,@sect_active)
